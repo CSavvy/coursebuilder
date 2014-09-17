@@ -1,0 +1,10 @@
+id,type,unit_id,title,release_date,now_available
+1,A,Pre,Pre-Course Survey,,True
+2,U,1,Introduction: What Scribbler Can Do,,True
+3,U,2,Installing Calico and Connecting via Bluetooth,,True
+4,U,3,The Shell,,True
+5,U,4,Sample Programs: Scribbler,,True
+6,U,5,Sample Programs: Simulator,,True
+7,U,6,Exercises,,True
+8,U,7,Resources,,True
+9,A,Fin,Post-Course Survey,,True

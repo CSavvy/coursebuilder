@@ -1,0 +1,44 @@
+// Copyright 2012 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS-IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
+// When the assessment page loads, activity-generic.js will render the contents
+// of the 'assessment' variable into the enclosing HTML webpage.
+
+// For information on modifying this page, see
+// https://code.google.com/p/course-builder/wiki/CreateAssessments.
+
+
+var assessment = {
+  // HTML to display at the start of the page
+  preamble: 'Before we begin, we\'d like to learn a bit about you and your previous experience with computer science and robotics. When you\'re done with the course, you will take another survey to help you think about what you\'ve learned and help us improve this course.<br><br> While we hope that you will answer all of the questions, feel free to leave a question blank if you do not want to answer it.<br><br><img alt="Pleo Herd" src="/assets/img/pleo_herd.jpg" align="center" /><br>',
+
+  // An ordered list of questions, with each question's type implicitly determined by the fields it possesses:
+  //   choices              - multiple choice question (with exactly one correct answer)
+  //   correctAnswerString  - case-insensitive string match
+  //   correctAnswerRegex   - freetext regular expression match
+  //   correctAnswerNumeric - freetext numeric match
+    questionsList: [
+    {questionHTML: 'Please take <a target="_blank" href="https://usc.qualtrics.com/SE/?SID=SV_eVud7KyxD3rLxD7">this survey (https://usc.qualtrics.com/SE/?SID=SV_eVud7KyxD3rLxD7)</a>. When you\'re done, please click "I\'m Finished" below, then press the Submit button. If you\'re not done, just wait to press the Submit button until you are. Thanks!',
+     choices: ['Still working on the survey above', correct('I\'m finished')],
+     },
+     ],
+
+  // The assessmentName key is deprecated in v1.3 of Course Builder, and no
+  // longer used. The assessment name should be set in the unit.csv file or via
+  // the course editor interface.
+  assessmentName: 'Pre', // unique name submitted along with all of the answers
+
+  checkAnswers: false    // render a "Check your Answers" button to allow students to check answers prior to submitting?
+}
